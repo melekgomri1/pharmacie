@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Category;
+use App\Entity\Categoryjob;
+use App\Entity\Job;
 use App\Entity\Product;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -34,5 +36,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Product', 'fa-duotone fa-shop', Product::class);
+        yield MenuItem::linkToCrud('Category job', 'fa-duotone fa-shop', Categoryjob::class);
+        yield MenuItem::linkToCrud('job', 'fa-duotone fa-shop', Job::class);
     }
 }
