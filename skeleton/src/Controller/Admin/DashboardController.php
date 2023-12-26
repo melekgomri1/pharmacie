@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Category;
 use App\Entity\Categoryjob;
+use App\Entity\Contact;
 use App\Entity\Job;
 use App\Entity\Product;
 use App\Entity\User;
@@ -38,5 +39,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Product', 'fa-duotone fa-shop', Product::class);
         yield MenuItem::linkToCrud('Category job', 'fa-duotone fa-shop', Categoryjob::class);
         yield MenuItem::linkToCrud('job', 'fa-duotone fa-shop', Job::class);
+        yield MenuItem::linkToCrud('Contact', 'fa-duotone fa-shop', Contact::class);
     }
 }
