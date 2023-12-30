@@ -32,7 +32,7 @@ class DashboardController extends AbstractDashboardController
     }
 
     public function configureMenuItems(): iterable
-    {
+    {if($this->isGranted('ROLE_ADMIN')){
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
@@ -41,4 +41,5 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('job', 'fa-duotone fa-shop', Job::class);
         yield MenuItem::linkToCrud('Contact', 'fa-duotone fa-shop', Contact::class);
     }
+}
 }
